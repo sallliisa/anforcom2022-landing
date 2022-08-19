@@ -11,8 +11,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>Create Next App</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Navbar />
-      <Component {...pageProps} />
+      <div className='bg-zinc-900'>
+        <Navbar />
+        <Component {...pageProps} />
+      </div>
     </>
   )
 }
