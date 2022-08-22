@@ -6,8 +6,41 @@ import ReactDOM from 'react-dom'
 
 const timelineItems = [
   { title: 'First Batch\nof Registration', date: '5 August - 28 August', isActive: true },
-  { title: 'Second Batch\nof Registration', date: '5 August - 28 August', isActive: false },
-  { title: 'Third Batch\nof Registration', date: '5 August - 28 August', isActive: false }
+  { title: 'Second Batch\nof Registration', date: '1 September - 23 September', isActive: false },
+  { title: 'UI/UX Competition\nProposal Submission', date: '5 August - 25 September', isActive: false },
+  { title: 'Finalists\nAnnouncement', date: '3 October 2022', isActive: false },
+  { title: 'Technical Meeting:\nFinal Day', date: '5 October 2022', isActive: false },
+  { title: 'Anforcom 2022\nGrand Final', date: '8 October 2022', isActive: false }
+]
+
+const faqItems = [
+  { title: 'Bagaimana cara mendaftar?', content: 'Tatacara pendaftaran tersedia di highlight Instagram Anforcom.' },
+  {
+    title: 'Bagaimana jika belum memiliki KTM/Kartu Pelajar?',
+    content: 'Bisa menggunakan e-KTM, IRS, atau surat pengantar dari instansi pendidikan terkait.'
+  },
+  {
+    title: 'Apa itu kode tim?',
+    content:
+      'Kode Team adalah kode unik yang didapatkan setiap tim setelah ketua tim mendaftar. Kode ini digunakan untuk anggota tim bergabung kedalam tim masing masing'
+  },
+  { title: 'Berapa lama pembayaran akan dikonfirmasi?', content: 'Pembayaran akan terkonfirmasi maksimal 3x24 Jam.' },
+  {
+    title: 'Bagaimana kriteria penilaiannya?',
+    content:
+      'Untuk kriteria penilaian tahap penyisihan dibagi jadi 4 yaitu ide, prototype, proposal, dan video. Sedangkan untuk tahap final dibagi jadi 2 penalaran dan performa, presentasi.'
+  },
+  { title: 'Berapa tim yang akan hadir di final?', content: 'Final DUC nantinya akan terdapat 4 tim.' },
+  {
+    title: 'Propsal yang sudah dikirim, apakah masih bisa direvisi?',
+    content:
+      'Proposal yang sudah dikirim masih bisa direvisi hingga batas waktu yang ditentukan. Jadi untuk teman-teman peserta yang sudah mengirim proposal dan ternyata terdapat revisi, masih bisa dikirim lagi ya.'
+  },
+  {
+    title: 'Di mana dan kapan acara final diadakan?',
+    content:
+      'Nahh.. untuk acara final sendiri ini spesial teman-teman, karena final akan diadakan secara offline di kampus Universitas Diponegoro pada tanggal 8 Oktober 2022'
+  }
 ]
 
 const DUC: NextPage = () => {
@@ -33,7 +66,7 @@ const DUC: NextPage = () => {
             <Center>
               <Stack className='px-8 py-16 xl:px-64 lg:px-32 md:px-16 2xl:py-32 z-10 gap-8'>
                 <h1 className='text-6xl 2xl:text-8xl md:text-7xl font-bold max-w-4xl leading-snug z-10 text-center'>
-                  Diponegoro <span className='text-blue-600'>UI/UX</span> Competition
+                  Diponegoro <span className='text-afblue'>UI/UX</span> Competition
                 </h1>
                 <h2 className='text-2xl font-light z-10 text-center'>Revolt, be creative, be different.</h2>
                 <Center>
@@ -52,7 +85,7 @@ const DUC: NextPage = () => {
 
           <Stack align='center' className='z-10 px-8 gap-4'>
             <h1 className='text-4xl font-bold text-center'>
-              Tentang <span className='text-blue-600'>DUC</span>
+              Tentang <span className='text-afblue'>DUC</span>
             </h1>
             <p className='text-md max-w-3xl text-center'>
               UI/UX adalah salah satu cabang lomba dari serangkaian kegiatan Anforcom 2022 yang dapat diikuti oleh
@@ -64,16 +97,16 @@ const DUC: NextPage = () => {
           <Box className='px-8'>
             <Grid type='cols' amount='1' className='gap-4'>
               <Stack align='center'>
-                <IconCircle1 className='stroke-blue-600/20 -z-1' size={225} />
+                <IconCircle1 className='stroke-afblue/20 -z-1' size={225} />
                 <Stack align='center' className='mt-[-64px]'>
                   <h2 className='text-xs tracking-[0.5rem]'>FIRST PLACE</h2>
-                  <h1 className='text-blue-600 text-6xl font-bold max-w-3xl'>Rp3.500.000</h1>
+                  <h1 className='text-afblue text-6xl font-bold max-w-3xl'>Rp3.500.000</h1>
                 </Stack>
               </Stack>
 
               <Group justify='center' className='gap-8'>
                 <Stack align='center'>
-                  <IconCircle2 className='stroke-zinc-600/20 -z-1' size={width > 1299 ? 225 : 128} />
+                  <IconCircle2 className='stroke-[#101012] -z-1' size={width > 1299 ? 225 : 128} />
                   <Stack align='center' className='mt-[-36px]'>
                     <h2 className='text-xs tracking-[0.25rem] text-center'>SECOND PLACE</h2>
                     <h1 className='text-xl font-bold max-w-3xl'>Rp2.500.000</h1>
@@ -81,7 +114,7 @@ const DUC: NextPage = () => {
                 </Stack>
 
                 <Stack align='center'>
-                  <IconCircle3 className='stroke-zinc-600/20 -z-1 mr-4' size={width > 1299 ? 225 : 128} />
+                  <IconCircle3 className='stroke-[#101012] -z-1 mr-4' size={width > 1299 ? 225 : 128} />
                   <Stack align='center' className='mt-[-36px]'>
                     <h2 className='text-xs tracking-[0.25rem] text-center'>THIRD PLACE</h2>
                     <h1 className='text-xl font-bold max-w-3xl'>Rp1.500.000</h1>
@@ -107,7 +140,7 @@ const DUC: NextPage = () => {
                       <div className='whitespace-pre'>
                         <h1
                           className={`text-5xl md:text-6xl font-bold ${
-                            data.isActive ? `text-blue-600` : `text-zinc-900/80`
+                            data.isActive ? `text-afblue` : `text-zinc-900/80`
                           }`}
                         >
                           {data.title}
@@ -141,48 +174,19 @@ const DUC: NextPage = () => {
 
           <Stack align='center' className='gap-8'>
             <h1 className='text-4xl font-bold text-center'>
-              Frequently Asked <span className='text-blue-600'>Questions</span>
+              Frequently Asked <span className='text-afblue'>Questions</span>
             </h1>
-            <Stack className='gap-4 px-96 max-w-[1440px] min-w-[1058px] sm:min-w-[1280px]'>
-              <Accordion title='Bagaimana cara mendaftar?'>
-                Tatacara pendaftaran tersedia di highlight Instagram Anforcom
-              </Accordion>
-              <Accordion title='Bagaimana jika belum memiliki KTM/Kartu Pelajar?'>
-                Bisa menggunakan e-KTM, IRS, atau surat pengantar dari instansi pendidikan terkait.
-              </Accordion>
-              <Accordion title='Apa itu kode tim?'>
-                Kode Team adalah kode unik yang didapatkan setiap tim setelah ketua tim mendaftar . Kode ini digunakan
-                untuk anggota tim bergabung kedalam tim masing masing
-              </Accordion>
-              <Accordion title='Berapa lama pembayaran akan dikonfirmasi?'>
-                Pembayaran akan terkonfirmasi maksimal 3x24 Jam.
-              </Accordion>
-              <Accordion title='Apa yang harus dilakukan setelah mendaftar dan mengunggah bukti pembayaran?'>
-                Silahkan bersiap dan menunggu status pembayaran tim anda menjadi terverifikasi.
-              </Accordion>
-              <Accordion title='Bagaimana kriteria penilaiannya?'>
-                Untuk kriteria penilaian tahap penyisihan dibagi jadi 4 yaitu ide, prototype, proposal, dan video.
-                Sedangkan untuk tahap final dibagi jadi 2 penalaran dan performa, presentasi.
-              </Accordion>
-              <Accordion title='Berapa tim yang akan hadir di final?'>
-                Final DUC nantinya akan terdapat 4 tim.
-              </Accordion>
-              <Accordion title='Propsal yang sudah dikirim, apakah masih bisa direvisi?'>
-                Proposal yang sudah dikirim masih bisa direvisi hingga batas waktu yang ditentukan. Jadi untuk
-                teman-teman peserta yang sudah mengirim proposal dan ternyata terdapat revisi, masih bisa dikirim lagi
-                ya.
-              </Accordion>
-              <Accordion title='Di mana dan kapan acara finalnya?'>
-                Nahh.. untuk acara final sendiri ini spesial teman-teman, karena final akan diadakan secara offline di
-                kampus Universitas Diponegoro pada tanggal 8 Oktober 2022
-              </Accordion>
+            <Stack className='gap-4 px-96 max-w-[1440px] min-w-[1150px] sm:min-w-[1280px] md:w-[1440px]'>
+              {faqItems.map((data) => (
+                <Accordion title={data.title}>{data.content}</Accordion>
+              ))}
             </Stack>
           </Stack>
 
           <div className='relative bg-zinc-900 z-0 overflow-hidden'>
             <Stack className='px-8 py-16 xl:px-64 lg:px-32 md:px-16 2xl:py-32 z-10 gap-16'>
               <h1 className='text-6xl 2xl:text-8xl md:text-7xl font-bold max-w-3xl '>
-                Prepare yourselves, and get <span className='text-blue-600'>ready.</span>
+                Prepare yourselves, and get <span className='text-afblue'>ready.</span>
               </h1>
               <Group>
                 <Button primary>Daftar sekarang</Button>

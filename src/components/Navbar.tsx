@@ -12,13 +12,15 @@ export default function Navbar() {
   const router = useRouter()
   return (
     <>
-      <Center inline className='w-full h-12 bg-zinc-900/50 z-50 top-0 sticky backdrop-blur-xl'>
-        <Group className='gap-8 font-light text-neutral-300'>
+      <Center inline className='w-full h-12 bg-zinc-900/50 z-50 top-0 sticky backdrop-blur-xl py-7'>
+        <Group className='gap-4 font-light text-white'>
           {routes.map((ele) => (
             <Box
               key={id}
               onClick={() => router.push(ele.link)}
-              className={`${isActive(ele.route, router) ? 'font-bold' : 'font-normal'} hover:text-blue-600`}
+              className={`${
+                isActive(ele.route, router) ? 'font-semibold bg-afblue rounded-full' : 'font-normal'
+              } hover:text-neutral-300 cursor-pointer px-4 py-1`}
             >
               {ele.text}
             </Box>

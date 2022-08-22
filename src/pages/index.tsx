@@ -9,10 +9,10 @@ const Home: NextPage = () => {
           <div className='relative bg-zinc-900 z-0 overflow-hidden'>
             <Stack className='px-8 py-16 xl:px-64 lg:px-32 md:px-16 2xl:py-32 z-10 gap-8'>
               <h1 className='text-6xl 2xl:text-8xl md:text-7xl font-bold max-w-4xl leading-snug z-10'>
-                Annual <span className='text-blue-600'>Informatics</span> Competition 2022
+                Annual <span className='text-afblue'>Informatics</span> Competition 2022
               </h1>
               <h2 className='text-2xl font-light z-10'>
-                Overcome the <span className='text-blue-600 font-semibold'>infinity</span>
+                Overcome the <span className='text-afblue font-semibold'>infinity</span>
               </h2>
               <Group className='gap-2 z-10'>
                 <Button primary>Daftar sekarang</Button>
@@ -28,7 +28,7 @@ const Home: NextPage = () => {
           <Stack align='center' className='z-10 px-8 gap-4'>
             <h2 className='text-2xl font-light text-center'>Tentang</h2>
             <h1 className='text-4xl font-bold text-center'>
-              Anforcom <span className='text-blue-600'>2022</span>
+              Anforcom <span className='text-afblue'>2022</span>
             </h1>
             <p className='text-md max-w-3xl text-center'>
               Anforcom (Annual Informatics Competition) adalah serangkaian acara dan perlombaan yang diadakan Mahasiswa
@@ -46,7 +46,7 @@ const Home: NextPage = () => {
           <Stack align='center' className='z-10 px-8 gap-8'>
             <Box>
               <h1 className='text-4xl font-bold text-center'>
-                <span className='text-blue-600'>Kompetisi</span> dan <span className='text-blue-600'>Acara</span>
+                <span className='text-afblue'>Kompetisi</span> dan <span className='text-afblue'>Acara</span>
               </h1>
               <h2 className='text-xl font-light mt-6 max-w-sm text-center'>
                 Anforcom 2022 menyelenggarakan dua kompetisi dan satu acara
@@ -92,7 +92,7 @@ const Home: NextPage = () => {
           <div className='relative bg-zinc-900 z-0 overflow-hidden'>
             <Stack className='px-8 py-16 xl:px-64 lg:px-32 md:px-16 2xl:py-32 z-10 gap-16'>
               <h1 className='text-6xl 2xl:text-8xl md:text-7xl font-bold max-w-3xl '>
-                Prepare yourselves, and get <span className='text-blue-600'>ready.</span>
+                Prepare yourselves, and get <span className='text-afblue'>ready.</span>
               </h1>
               <Group>
                 <Button primary>Daftar sekarang</Button>
