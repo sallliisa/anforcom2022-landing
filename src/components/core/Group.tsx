@@ -5,6 +5,10 @@ type Props = React.HTMLAttributes<HTMLDivElement> & {
   justify?: string
 }
 
-export function Group({ children, justify, className }: Props) {
-  return <div className={`flex flex-row ${!!justify ? `justify-${justify}` : ''} ${className}`}>{children}</div>
+export function Group({ children, justify, className, ...others }: Props) {
+  return (
+    <div className={`flex flex-row ${!!justify ? `justify-${justify}` : ''} ${className}`} {...others}>
+      {children}
+    </div>
+  )
 }

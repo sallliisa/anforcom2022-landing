@@ -5,9 +5,9 @@ type Props = React.HTMLAttributes<HTMLDivElement> & {
   href: string
 }
 
-export function Anchor({ children, href, className }: Props) {
+export function Anchor({ children, href, className, ...others }: Props) {
   return (
-    <div className={`${className}`}>
+    <div className={`${className}`} {...others}>
       <a href={`${href}`}>{children}</a>
     </div>
   )

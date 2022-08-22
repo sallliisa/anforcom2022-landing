@@ -5,6 +5,10 @@ type Props = React.HTMLAttributes<HTMLDivElement> & {
   inline?: boolean
 }
 
-export function Center({ children, inline, className }: Props) {
-  return <div className={`${inline ? 'inline-flex' : 'flex'} justify-center items-center ${className}`}>{children}</div>
+export function Center({ children, inline, className, ...others }: Props) {
+  return (
+    <div className={`${inline ? 'inline-flex' : 'flex'} justify-center items-center ${className}`} {...others}>
+      {children}
+    </div>
+  )
 }

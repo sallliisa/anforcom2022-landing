@@ -5,6 +5,10 @@ type Props = React.HTMLAttributes<HTMLDivElement> & {
   align?: 'start' | 'end' | 'center' | 'baseline' | 'stretch'
 }
 
-export function Stack({ children, align, className }: Props) {
-  return <div className={`flex flex-col ${!!align ? `items-${align}` : ''} ${className}`}>{children}</div>
+export function Stack({ children, align, className, ...others }: Props) {
+  return (
+    <div className={`flex flex-col ${!!align ? `items-${align}` : ''} ${className}`} {...others}>
+      {children}
+    </div>
+  )
 }

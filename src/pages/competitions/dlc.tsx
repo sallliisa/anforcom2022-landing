@@ -1,7 +1,7 @@
 import { Button, Card, Group, Stack, Box, Grid, Anchor } from 'components/core'
 import type { NextPage } from 'next'
 
-const Home: NextPage = () => {
+const DLC: NextPage = () => {
   return (
     <>
       <div className='relative min-h-screen bg-black font-sans text-white overflow-hidden'>
@@ -19,10 +19,7 @@ const Home: NextPage = () => {
                 <Button>Masuk</Button>
               </Group>
             </Stack>
-            <img
-              className='absolute right-[-225px] top-16 z-0 md:w-[700px] xl:right-[-172px] xl:top-0 2xl:right-24'
-              src='/images/abs1.png'
-            />
+            <img className='absolute right-[-225px] top-16 z-0 md:w-[700px] xl:right-24' src='/images/abs1.png' />
           </div>
 
           <Stack align='center' className='z-10 px-8 gap-4'>
@@ -57,7 +54,7 @@ const Home: NextPage = () => {
                 <Stack align='center' className='justify-between min-h-full'>
                   <img src='/images/duc.png' className='mt-8' />
                   <Box>
-                    <h2 className='text-2xl font-semibold max-w-[200px] text-center'>Diponegoro UI/UX Competition</h2>
+                    <h2 className='text-2xl font-semibold max-w-[200px] text-center'>UI/UX Competition</h2>
                     <Anchor href='#' className='text-md font-light max-w-[200px] text-center underline mt-4'>
                       Selengkapnya
                     </Anchor>
@@ -68,7 +65,7 @@ const Home: NextPage = () => {
                 <Stack align='center' className='justify-between min-h-full'>
                   <img src='/images/dlc.png' />
                   <Box>
-                    <h2 className='text-2xl font-semibold max-w-[200px] text-center'>Diponegoro Logic Competition</h2>
+                    <h2 className='text-2xl font-semibold max-w-[200px] text-center'>Logic Competition</h2>
                     <Anchor href='#' className='text-md font-light max-w-[200px] text-center underline mt-4'>
                       Selengkapnya
                     </Anchor>
@@ -109,4 +106,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default DLC
