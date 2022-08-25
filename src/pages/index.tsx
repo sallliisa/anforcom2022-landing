@@ -17,8 +17,10 @@ const Home: NextPage = () => {
                 Overcome the <span className='text-afblue font-semibold'>infinity</span>
               </h2>
               <Group className='gap-2 z-10'>
-                <Button primary>Daftar sekarang</Button>
-                <Button>Masuk</Button>
+                <Button primary onClick={() => router.push('https://app.anforcom.com/auth/register')}>
+                  Daftar sekarang
+                </Button>
+                <Button onClick={() => router.push('https://app.anforcom.com/auth/login')}>Masuk</Button>
               </Group>
             </Stack>
             <img

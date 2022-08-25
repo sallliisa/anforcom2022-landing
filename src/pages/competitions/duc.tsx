@@ -175,7 +175,7 @@ const DUC: NextPage = () => {
           </Stack>
 
           <Stack align='center' className='gap-8'>
-            <h1 className='text-4xl font-bold text-center'>
+            <h1 className='text-4xl font-bold text-center max-w-[350px]'>
               Frequently Asked <span className='text-afblue'>Questions</span>
             </h1>
             <Stack className='gap-4 px-96 max-w-[1440px] min-w-[1150px] sm:min-w-[1280px] md:w-[1440px]'>
