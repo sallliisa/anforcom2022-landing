@@ -5,12 +5,12 @@ import { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom'
 
 const timelineItems = [
-  { title: 'First Batch\nof Registration', date: '5 August - 28 August', isActive: true },
-  { title: 'Second Batch\nof Registration', date: '1 September - 23 September', isActive: false },
-  { title: 'Logic Competition\nElimination Phase', date: '1 October - 3 October', isActive: false },
-  { title: 'Finalists\nAnnouncement', date: '3 October 2022', isActive: false },
-  { title: 'Technical Meeting:\nFinal Day', date: '5 October 2022', isActive: false },
-  { title: 'Anforcom 2022\nGrand Final', date: '8 October 2022', isActive: false }
+  { title: 'Registration: 1st Batch', date: '5 August - 28 August', isActive: true },
+  { title: 'Registration: 2nd Batch', date: '1 September - 23 September', isActive: false },
+  { title: 'Logic Competition Elimination Phase', date: '1 October - 3 October', isActive: false },
+  { title: 'Finalists Announcement', date: '3 October 2022', isActive: false },
+  { title: 'Technical Meeting: Final Day', date: '5 October 2022', isActive: false },
+  { title: 'Anforcom 2022 Grand Final', date: '8 October 2022', isActive: false }
 ]
 
 const faqItems = [
@@ -118,17 +118,17 @@ const DLC: NextPage = () => {
           <Stack className='gap-16'>
             <Box className='overflow-x-hidden'>
               <Group
-                className='items-center gap-8 whitespace-nowrap'
+                className='items-center gap-8 whitespace-normal'
                 style={{
-                  transform: `translateX(-${timelineItem * (width > 765 ? 740 : 655)}px)`,
+                  transform: `translateX(-${timelineItem * 670}px)`,
                   transition: 'transform 0.3s'
                 }}
               >
                 <div className='ml-0 2xl:ml-64 xl:ml-32 md:ml-16'></div>
                 {timelineItems.map((data, idx) => (
                   <>
-                    <Box className=''>
-                      <div className='whitespace-pre'>
+                    <Box className='min-w-[350px]'>
+                      <div>
                         <h1
                           className={`text-5xl md:text-6xl font-bold ${
                             data.isActive ? `text-afblue` : `text-zinc-900/80`
