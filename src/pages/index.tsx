@@ -1,7 +1,9 @@
 import { Button, Card, Group, Stack, Box, Grid, Anchor } from 'components/core'
 import type { NextPage } from 'next'
+import { useRouter } from 'next/router'
 
 const Home: NextPage = () => {
+  const router = useRouter()
   return (
     <>
       <div className='relative min-h-screen bg-black font-sans text-white overflow-hidden'>
@@ -53,7 +55,10 @@ const Home: NextPage = () => {
               </h2>
             </Box>
             <Grid type='cols' amount='1' className='gap-8 xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1'>
-              <Card className='p-8 h-[448px]'>
+              <Card
+                onClick={() => router.push('/competitions/duc')}
+                className='p-8 h-[448px] hover:scale-[0.99] active:scale-[0.95] active:bg-neutral-800/90 cursor-pointer'
+              >
                 <Stack align='center' className='justify-between min-h-full'>
                   <img src='/images/duc.png' className='mt-8' />
                   <Box>
@@ -64,7 +69,10 @@ const Home: NextPage = () => {
                   </Box>
                 </Stack>
               </Card>
-              <Card className='p-8 h-[448px]'>
+              <Card
+                onClick={() => router.push('/competitions/dlc')}
+                className='p-8 h-[448px] hover:scale-[0.99] active:scale-[0.95] active:bg-neutral-800/90 cursor-pointer'
+              >
                 <Stack align='center' className='justify-between min-h-full'>
                   <img src='/images/dlc.png' />
                   <Box>
@@ -75,7 +83,10 @@ const Home: NextPage = () => {
                   </Box>
                 </Stack>
               </Card>
-              <Card className='p-8 h-[448px] md:col-span-2 xl:col-span-1'>
+              <Card
+                onClick={() => router.push('/competitions/duc')}
+                className='p-8 h-[448px] md:col-span-2 xl:col-span-1 hover:scale-[0.99] active:scale-[0.95] active:bg-neutral-800/90 cursor-pointer'
+              >
                 <Stack align='center' className='justify-between'>
                   <img src='/images/seminar.png' />
                   <Box>

@@ -61,7 +61,7 @@ const DUC: NextPage = () => {
   return (
     <>
       <div className='relative min-h-screen bg-black font-sans text-white'>
-        <Stack className='gap-36 overflow-hidden'>
+        <Stack className='gap-36 overflow-hidden pb-36'>
           <div className='relative bg-zinc-900 z-0 overflow-hidden'>
             <Center>
               <Stack className='px-8 py-16 xl:px-64 lg:px-32 md:px-16 2xl:py-32 z-10 gap-8'>
@@ -161,6 +161,7 @@ const DUC: NextPage = () => {
                   setTimelineItem(timelineItem - 1)
                 }}
                 style={{ cursor: 'pointer' }}
+                className='hover:bg-white/20 rounded-full'
               />
               <IconChevronRight
                 size={32}
@@ -168,6 +169,7 @@ const DUC: NextPage = () => {
                   timelineItem != timelineItems.length - 1 ? setTimelineItem(timelineItem + 1) : null
                 }}
                 style={{ cursor: 'pointer' }}
+                className='hover:bg-white/20 rounded-full'
               />
             </Group>
           </Stack>
@@ -182,21 +184,6 @@ const DUC: NextPage = () => {
               ))}
             </Stack>
           </Stack>
-
-          <div className='relative bg-zinc-900 z-0 overflow-hidden'>
-            <Stack className='px-8 py-16 xl:px-64 lg:px-32 md:px-16 2xl:py-32 z-10 gap-16'>
-              <h1 className='text-6xl 2xl:text-8xl md:text-7xl font-bold max-w-3xl '>
-                Prepare yourselves, and get <span className='text-afblue'>ready.</span>
-              </h1>
-              <Group>
-                <Button primary>Daftar sekarang</Button>
-              </Group>
-            </Stack>
-            <img
-              className='absolute right-0 top-[100px] sm:top-[-50px] md:top-[-100px] lg:top-[-150px] xl:top-[-200px] 2xl:top-[-250px] -z-10'
-              src='/images/abs2.png'
-            />
-          </div>
         </Stack>
       </div>
     </>

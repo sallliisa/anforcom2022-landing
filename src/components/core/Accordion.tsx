@@ -9,7 +9,6 @@ type Props = React.HTMLAttributes<HTMLDivElement> & {
 
 export function Accordion({ children, title, className, ...others }: Props) {
   const [isOpen, setIsOpen] = React.useState(false)
-  console.log(isOpen)
   return (
     <>
       <div
