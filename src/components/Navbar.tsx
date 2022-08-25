@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
     <>
       <Center inline className='w-full h-12 bg-zinc-900/50 z-50 top-0 sticky backdrop-blur-xl py-7'>
-        <Group className='gap-0 font-light text-white'>
+        <Group className='gap-0 sm:gap-8 font-light text-white text-sm sm:text-base'>
           <Box
             key={id}
             onClick={() => router.push(routes[0].link)}

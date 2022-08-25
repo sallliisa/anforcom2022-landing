@@ -11,15 +11,17 @@ export default function Footer() {
   return (
     <>
       <Box className='h-12 bg-black text-white'>
-        <Group inline className='justify-between px-8 w-full h-12 bg-black py-7 items-center gap-16'>
-          <Group className='gap-4'>
-            <h1 className='font-medium text-white/50'>Need any help?</h1>
-            <IconMail stroke={1.5} />
-            <IconBrandWhatsapp stroke={1.5} />
-            <IconBrandDiscord stroke={1.5} />
+        <Group inline className='justify-between px-8 w-full h-12 bg-black py-7 items-center'>
+          <Group inline className='items-center gap-4'>
+            <h1 className='font-medium text-white/50 text-sm'>Need any help?</h1>
+            <Group className='gap-2'>
+              <IconMail stroke={1.5} />
+              <IconBrandWhatsapp stroke={1.5} />
+              <IconBrandDiscord stroke={1.5} />
+            </Group>
           </Group>
           <Group className='gap-4'>
-            <h1 className='font-medium text-white/50'>Anforcom @2022</h1>
+            <h1 className='font-medium text-white/50 text-sm'>Anforcom @2022</h1>
           </Group>
         </Group>
       </Box>
