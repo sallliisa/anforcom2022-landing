@@ -36,7 +36,7 @@ export default function Navbar() {
             } cursor-pointer px-4 py-1 relative`}
           >
             Competitions
-            <Box className={`${popover ? `hidden` : null}`}>
+            <Box className={`${popover ? null : 'hidden'}`}>
               <Box className='absolute bg-zinc-800 p-2 text-sm w-64 top-12 left-[-64px] rounded-lg'>
                 <Stack className='gap-1'>
                   <Box className='p-2 hover:bg-zinc-900 rounded-lg'>
