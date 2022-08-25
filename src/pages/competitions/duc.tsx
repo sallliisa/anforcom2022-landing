@@ -9,7 +9,7 @@ const timelineItems = [
   { title: 'Registration: 2nd Batch', date: '1 September - 23 September', isActive: false },
   { title: 'UI/UX Competition Proposal Submission', date: '5 August - 25 September', isActive: false },
   { title: 'Finalists Announcement', date: '3 October 2022', isActive: false },
-  { title: 'Technical\nMeeting: Final Day', date: '5 October 2022', isActive: false },
+  { title: 'Technical Meeting: Final Day', date: '5 October 2022', isActive: false },
   { title: 'Anforcom 2022 Grand Final', date: '8 October 2022', isActive: false }
 ]
 
@@ -136,10 +136,10 @@ const DUC: NextPage = () => {
                 <div className='ml-0 2xl:ml-64 xl:ml-32 md:ml-16'></div>
                 {timelineItems.map((data, idx) => (
                   <>
-                    <Box className='min-w-[350px]'>
+                    <Box className='min-w-[360px]'>
                       <div>
                         <h1
-                          className={`text-5xl md:text-6xl font-bold ${
+                          className={`text-5xl md:text-6xl font-bold break-words ${
                             data.isActive ? `text-afblue` : `text-zinc-900/80`
                           }`}
                         >

@@ -127,10 +127,10 @@ const DLC: NextPage = () => {
                 <div className='ml-0 2xl:ml-64 xl:ml-32 md:ml-16'></div>
                 {timelineItems.map((data, idx) => (
                   <>
-                    <Box className='min-w-[350px]'>
+                    <Box className='min-w-[360px]'>
                       <div>
                         <h1
-                          className={`text-5xl md:text-6xl font-bold ${
+                          className={`text-5xl md:text-6xl font-bold break-words ${
                             data.isActive ? `text-afblue` : `text-zinc-900/80`
                           }`}
                         >
