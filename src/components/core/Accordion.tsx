@@ -16,7 +16,7 @@ export function Accordion({ children, title, className, ...others }: Props) {
         className={`bg-neutral-900/80 rounded-md border border-neutral-400/20 p-4 w-full cursor-pointer hover:bg-neutral-900/50 ${className}`}
         {...others}
       >
-        <Group justify='between' className='items-center'>
+        <Group justify='between' className='items-center gap-4'>
           <h1 className='font-bold text-zinc-400'>{title}</h1>
           {isOpen ? <IconChevronDown /> : <IconChevronUp />}
         </Group>

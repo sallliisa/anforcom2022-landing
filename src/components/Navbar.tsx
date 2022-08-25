@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
     <>
       <Center inline className='w-full h-12 bg-zinc-900/50 z-50 top-0 sticky backdrop-blur-xl py-7'>
-        <Group className='gap-4 font-light text-white'>
+        <Group className='gap-0 font-light text-white'>
           <Box
             key={id}
             onClick={() => router.push(routes[0].link)}
@@ -40,14 +40,20 @@ export default function Navbar() {
               <Box className='absolute bg-zinc-800 p-2 text-sm w-64 top-12 left-[-64px] rounded-lg'>
                 <Stack className='gap-1'>
                   <Box className='p-2 hover:bg-zinc-900 rounded-lg'>
-                    <Anchor href='/competitions/duc' className='text-white font-normal hover:text-white'>
+                    <Box
+                      onClick={() => router.push('/competitions/duc')}
+                      className='text-white font-normal hover:text-white'
+                    >
                       Diponegoro UI/UX Competition
-                    </Anchor>
+                    </Box>
                   </Box>
                   <Box className='p-2 hover:bg-zinc-900 rounded-lg'>
-                    <Anchor href='/competitions/dlc' className='text-white font-normal hover:text-white'>
+                    <Box
+                      onClick={() => router.push('/competitions/dlc')}
+                      className='text-white font-normal hover:text-white'
+                    >
                       Diponegoro Logic Competition
-                    </Anchor>
+                    </Box>
                   </Box>
                 </Stack>
               </Box>

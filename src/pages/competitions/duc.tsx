@@ -5,12 +5,12 @@ import { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom'
 
 const timelineItems = [
-  { title: 'First Batch\nof Registration', date: '5 August - 28 August', isActive: true },
-  { title: 'Second Batch\nof Registration', date: '1 September - 23 September', isActive: false },
-  { title: 'UI/UX Competition\nProposal Submission', date: '5 August - 25 September', isActive: false },
-  { title: 'Finalists\nAnnouncement', date: '3 October 2022', isActive: false },
-  { title: 'Technical Meeting:\nFinal Day', date: '5 October 2022', isActive: false },
-  { title: 'Anforcom 2022\nGrand Final', date: '8 October 2022', isActive: false }
+  { title: 'Registration: 1st Batch', date: '5 August - 28 August', isActive: true },
+  { title: 'Registration: 2nd Batch', date: '1 September - 23 September', isActive: false },
+  { title: 'UI/UX Competition Proposal Submission', date: '5 August - 25 September', isActive: false },
+  { title: 'Finalists Announcement', date: '3 October 2022', isActive: false },
+  { title: 'Technical\nMeeting: Final Day', date: '5 October 2022', isActive: false },
+  { title: 'Anforcom 2022 Grand Final', date: '8 October 2022', isActive: false }
 ]
 
 const faqItems = [
@@ -78,7 +78,7 @@ const DUC: NextPage = () => {
               </Stack>
             </Center>
             <img
-              className='absolute left-[-200px] top-[200px] sm:top-[0px] lg:left-0 xl:top-[150px] z-0 md:w-[700px] xl:right-24'
+              className='absolute left-[-100px] top-[200px] sm:top-[0px] lg:left-0 xl:top-[150px] z-0 md:w-[700px] xl:right-24'
               src='/images/abs3.png'
             />
           </div>
@@ -114,7 +114,7 @@ const DUC: NextPage = () => {
                 </Stack>
 
                 <Stack align='center'>
-                  <IconCircle3 className='stroke-[#101012] -z-1 mr-4' size={width > 1299 ? 225 : 128} />
+                  <IconCircle3 className='stroke-[#101012] -z-1' size={width > 1299 ? 225 : 128} />
                   <Stack align='center' className='mt-[-36px]'>
                     <h2 className='text-xs tracking-[0.25rem] text-center'>THIRD PLACE</h2>
                     <h1 className='text-xl font-bold max-w-3xl'>Rp1.500.000</h1>
@@ -127,17 +127,17 @@ const DUC: NextPage = () => {
           <Stack className='gap-16'>
             <Box className='overflow-x-hidden'>
               <Group
-                className='items-center gap-8 whitespace-nowrap'
+                className='items-center gap-8 whitespace-normal'
                 style={{
-                  transform: `translateX(-${timelineItem * (width > 765 ? 740 : 655)}px)`,
+                  transform: `translateX(-${timelineItem * 670}px)`,
                   transition: 'transform 0.3s'
                 }}
               >
                 <div className='ml-0 2xl:ml-64 xl:ml-32 md:ml-16'></div>
                 {timelineItems.map((data, idx) => (
                   <>
-                    <Box className=''>
-                      <div className='whitespace-pre'>
+                    <Box className='min-w-[350px]'>
+                      <div>
                         <h1
                           className={`text-5xl md:text-6xl font-bold ${
                             data.isActive ? `text-afblue` : `text-zinc-900/80`

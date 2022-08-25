@@ -55,7 +55,7 @@ const DLC: NextPage = () => {
           <div className='relative bg-zinc-900 z-0 overflow-hidden'>
             <Center>
               <Stack className='px-8 py-16 xl:px-64 lg:px-32 md:px-16 2xl:py-32 z-10 gap-4'>
-                <h2 className='text-xs tracking-[1rem] text-center'>SEMINAR</h2>
+                <h1 className='text-xs tracking-[1rem] z-10 text-center'>SEMINAR</h1>
                 <h1 className='text-6xl 2xl:text-8xl md:text-7xl font-bold max-w-4xl leading-snug z-10 text-center text-afblue'>
                   Awake
                 </h1>

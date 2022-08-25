@@ -105,7 +105,7 @@ const DLC: NextPage = () => {
                 </Stack>
 
                 <Stack align='center'>
-                  <IconCircle3 className='stroke-[#101012] -z-1 mr-4' size={width > 1299 ? 225 : 128} />
+                  <IconCircle3 className='stroke-[#101012] -z-1' size={width > 1299 ? 225 : 128} />
                   <Stack align='center' className='mt-[-36px]'>
                     <h2 className='text-xs tracking-[0.25rem] text-center'>THIRD PLACE</h2>
                     <h1 className='text-xl font-bold max-w-3xl'>Rp1.500.000</h1>
