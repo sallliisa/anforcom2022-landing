@@ -1,9 +1,31 @@
 import { Button, Card, Group, Stack, Box, Grid, Anchor } from 'components/core'
 import type { NextPage } from 'next'
 import { useRouter } from 'next/router'
+import { useState, useEffect } from 'react'
+import { IconChevronLeft, IconChevronRight } from '@tabler/icons'
+
+const carouselItems = [
+  { img: '/images/duc.png', title: 'Diponegoro UI/UX Competition', link: '/competitions/duc' },
+  { img: '/images/dlc.png', title: 'Diponegoro Logic Competition', link: '/competitions/dlc' },
+  { img: '/images/seminar.png', title: 'Seminar', link: '/seminar' }
+]
 
 const Home: NextPage = () => {
   const router = useRouter()
+  const [carouselItem, setCarouselItem] = useState(0)
+  const [width, setWidth] = useState(0)
+  useEffect(() => {
+    setWidth(window.innerWidth)
+  }, [])
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth)
+    }
+    window.addEventListener('resize', handleResize)
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [width])
   return (
     <>
       <div className='relative min-h-screen bg-black font-sans text-white overflow-hidden'>
@@ -56,50 +78,24 @@ const Home: NextPage = () => {
                 Anforcom 2022 menyelenggarakan dua kompetisi dan satu acara
               </h2>
             </Box>
-            <Grid type='cols' amount='1' className='gap-8 xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1'>
-              <Card
-                onClick={() => router.push('/competitions/duc')}
-                className='p-8 h-[448px] hover:scale-[0.99] active:scale-[0.95] active:bg-neutral-800/90 cursor-pointer'
-              >
-                <Stack align='center' className='justify-between min-h-full'>
-                  <img src='/images/duc.png' className='mt-8' />
-                  <Box>
-                    <h2 className='text-2xl font-semibold max-w-[200px] text-center'>Diponegoro UI/UX Competition</h2>
-                    <Anchor href='#' className='text-md font-light max-w-[200px] text-center underline mt-4'>
-                      Selengkapnya
-                    </Anchor>
-                  </Box>
-                </Stack>
-              </Card>
-              <Card
-                onClick={() => router.push('/competitions/dlc')}
-                className='p-8 h-[448px] hover:scale-[0.99] active:scale-[0.95] active:bg-neutral-800/90 cursor-pointer'
-              >
-                <Stack align='center' className='justify-between min-h-full'>
-                  <img src='/images/dlc.png' />
-                  <Box>
-                    <h2 className='text-2xl font-semibold max-w-[200px] text-center'>Diponegoro Logic Competition</h2>
-                    <Anchor href='#' className='text-md font-light max-w-[200px] text-center underline mt-4'>
-                      Selengkapnya
-                    </Anchor>
-                  </Box>
-                </Stack>
-              </Card>
-              <Card
-                onClick={() => router.push('/competitions/duc')}
-                className='p-8 h-[448px] md:col-span-2 xl:col-span-1 hover:scale-[0.99] active:scale-[0.95] active:bg-neutral-800/90 cursor-pointer'
-              >
-                <Stack align='center' className='justify-between'>
-                  <img src='/images/seminar.png' />
-                  <Box>
-                    <h2 className='text-2xl font-semibold max-w-[200px] text-center'>Seminar</h2>
-                    <Anchor href='#' className='text-md font-light max-w-[200px] text-center underline mt-4'>
-                      Selengkapnya
-                    </Anchor>
-                  </Box>
-                </Stack>
-              </Card>
-            </Grid>
+
+            <Group className='overflow-x-visible gap-4 whitespace-normal overflow-auto w-[100vw] px-4 lg:overflow-hidden lg:px-32 lg:justify-center no-scrollbar'>
+              {carouselItems.map((data) => (
+                <>
+                  <Card
+                    onClick={() => router.push(data.link)}
+                    className='p-8 h-[450px] min-w-[350px] hover:scale-[0.99] active:scale-[0.95] active:bg-neutral-800/90 cursor-pointer'
+                  >
+                    <Stack align='center' className='justify-between min-h-full'>
+                      <img src={data.img} className='mt-8' />
+                      <Box>
+                        <h2 className='text-2xl font-semibold max-w-[200px] text-center'>{data.title}</h2>
+                      </Box>
+                    </Stack>
+                  </Card>
+                </>
+              ))}
+            </Group>
           </Stack>
 
           <div className='relative bg-zinc-900 z-0 overflow-hidden'>

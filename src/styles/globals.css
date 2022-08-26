@@ -5,3 +5,7 @@
 * {
   transition: all 0.1s;
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

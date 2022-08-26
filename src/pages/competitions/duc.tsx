@@ -125,7 +125,7 @@ const DUC: NextPage = () => {
           </Box>
 
           <Stack className='gap-16'>
-            <Box className='overflow-x-hidden'>
+            <Box>
               <Group
                 className='items-center gap-8 whitespace-normal'
                 style={{

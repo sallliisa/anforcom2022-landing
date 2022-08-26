@@ -2,15 +2,22 @@ import { Center, Group, Box, Stack, Anchor } from './core'
 import { NextRouter, useRouter } from 'next/router'
 import { routes } from 'routes/routes'
 import { useId, useState } from 'react'
+import { Variants, m, AnimatePresence } from 'framer-motion'
 
 const isActive = (route: string, router: NextRouter) => {
   return route.split('/')[1] === router.pathname.split('/')[1]
+}
+
+const v: Variants = {
+  open: { opacity: 1, y: -20 },
+  closed: { opacity: 0, y: 0 }
 }
 
 export default function Navbar() {
   const id = useId()
   const router = useRouter()
   const [popover, setPopover] = useState(false)
+  console.log(popover)
   return (
     <>
       <Center inline className='w-full h-12 bg-zinc-900/50 z-50 top-0 sticky backdrop-blur-xl py-7'>
@@ -36,28 +43,38 @@ export default function Navbar() {
             } cursor-pointer px-4 py-1 relative`}
           >
             Competitions
-            <Box className={`${popover ? null : 'hidden'}`}>
-              <Box className='absolute bg-zinc-800 p-2 text-sm w-64 top-12 left-[-64px] rounded-lg'>
-                <Stack className='gap-1'>
-                  <Box className='p-2 hover:bg-zinc-900 rounded-lg'>
-                    <Box
-                      onClick={() => router.push('/competitions/duc')}
-                      className='text-white font-normal hover:text-white'
-                    >
-                      Diponegoro UI/UX Competition
-                    </Box>
+            {popover && (
+              <>
+                <m.div
+                  initial={{ y: -30, opacity: 0 }}
+                  animate={popover ? 'open' : 'closed'}
+                  variants={v}
+                  exit={{ y: 20, opacity: 0 }}
+                  transition={{ duration: 0.1 }}
+                >
+                  <Box className='absolute bg-zinc-800 p-2 text-sm w-64 top-12 left-[-64px] rounded-lg'>
+                    <Stack className='gap-1'>
+                      <Box className='p-2 hover:bg-zinc-900 rounded-lg'>
+                        <Box
+                          onClick={() => router.push('/competitions/duc')}
+                          className='text-white font-normal hover:text-white'
+                        >
+                          Diponegoro UI/UX Competition
+                        </Box>
+                      </Box>
+                      <Box className='p-2 hover:bg-zinc-900 rounded-lg'>
+                        <Box
+                          onClick={() => router.push('/competitions/dlc')}
+                          className='text-white font-normal hover:text-white'
+                        >
+                          Diponegoro Logic Competition
+                        </Box>
+                      </Box>
+                    </Stack>
                   </Box>
-                  <Box className='p-2 hover:bg-zinc-900 rounded-lg'>
-                    <Box
-                      onClick={() => router.push('/competitions/dlc')}
-                      className='text-white font-normal hover:text-white'
-                    >
-                      Diponegoro Logic Competition
-                    </Box>
-                  </Box>
-                </Stack>
-              </Box>
-            </Box>
+                </m.div>
+              </>
+            )}
           </Box>
           <Box
             key={id}
