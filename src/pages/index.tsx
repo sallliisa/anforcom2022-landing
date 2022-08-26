@@ -3,7 +3,6 @@ import type { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
 import { IconChevronLeft, IconChevronRight } from '@tabler/icons'
-import Image from 'next/image'
 
 const carouselItems = [
   { img: '/images/duc.png', title: 'Diponegoro UI/UX Competition', link: '/competitions/duc' },
@@ -46,7 +45,7 @@ const Home: NextPage = () => {
                 <Button onClick={() => router.push('https://app.anforcom.com/auth/login')}>Masuk</Button>
               </Group>
             </Stack>
-            <Image
+            <img
               className='absolute right-[-225px] top-16 z-0 md:w-[700px] xl:right-[-172px] xl:top-0 2xl:right-24'
               src='/images/abs1.png'
             />
@@ -88,7 +87,7 @@ const Home: NextPage = () => {
                     className='p-8 h-[450px] min-w-[350px] hover:scale-[0.99] active:scale-[0.95] active:bg-neutral-800/90 cursor-pointer'
                   >
                     <Stack align='center' className='justify-between min-h-full'>
-                      <img src={data.img} />
+                      <img src={data.img} className='mt-8' />
                       <Box>
                         <h2 className='text-2xl font-semibold max-w-[200px] text-center'>{data.title}</h2>
                       </Box>
@@ -108,7 +107,7 @@ const Home: NextPage = () => {
                 <Button primary>Daftar sekarang</Button>
               </Group>
             </Stack>
-            <Image
+            <img
               className='absolute right-0 top-[100px] sm:top-[-50px] md:top-[-100px] lg:top-[-150px] xl:top-[-200px] 2xl:top-[-250px] -z-10'
               src='/images/abs2.png'
             />

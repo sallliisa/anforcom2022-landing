@@ -3,7 +3,6 @@ import type { NextPage } from 'next'
 import { IconChevronLeft, IconChevronRight, IconCircle1, IconCircle2, IconCircle3 } from '@tabler/icons'
 import { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom'
-import Image from 'next/image'
 
 const timelineItems = [
   { title: 'Registration: 1st Batch', date: '5 August - 28 August', isActive: true },
@@ -68,7 +67,7 @@ const DLC: NextPage = () => {
                 </Center>
               </Stack>
             </Center>
-            <Image
+            <img
               className='absolute left-[-200px] top-[200px] sm:top-[0px] lg:left-0 xl:top-[-50px] 2xl:top-[150px] z-0 md:w-[700px] xl:right-24'
               src='/images/abs4.png'
             />
