@@ -120,7 +120,7 @@ const DLC: NextPage = () => {
               <Group
                 className='items-center gap-8 whitespace-normal'
                 style={{
-                  transform: `translateX(-${timelineItem * 670}px)`,
+                  transform: `translateX(-${timelineItem * 680}px)`,
                   transition: 'transform 0.3s'
                 }}
               >
