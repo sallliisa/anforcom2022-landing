@@ -3,6 +3,7 @@ import type { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
 import { IconChevronLeft, IconChevronRight } from '@tabler/icons'
+import Image from 'next/image'
 
 const carouselItems = [
   { img: '/images/duc.png', title: 'Diponegoro UI/UX Competition', link: '/competitions/duc' },
@@ -87,7 +88,7 @@ const Home: NextPage = () => {
                     className='p-8 h-[450px] min-w-[350px] hover:scale-[0.99] active:scale-[0.95] active:bg-neutral-800/90 cursor-pointer'
                   >
                     <Stack align='center' className='justify-between min-h-full'>
-                      <img src={data.img} className='mt-8' />
+                      <Image src={data.img} />
                       <Box>
                         <h2 className='text-2xl font-semibold max-w-[200px] text-center'>{data.title}</h2>
                       </Box>
