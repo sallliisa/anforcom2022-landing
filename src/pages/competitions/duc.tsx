@@ -3,6 +3,7 @@ import type { NextPage } from 'next'
 import { IconChevronLeft, IconChevronRight, IconCircle1, IconCircle2, IconCircle3 } from '@tabler/icons'
 import { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom'
+import { m, Variants } from 'framer-motion'
 
 const timelineItems = [
   { title: 'Registration: 1st Batch', date: '5 August - 28 August', isActive: true },
@@ -62,25 +63,26 @@ const DUC: NextPage = () => {
     <>
       <div className='relative min-h-screen bg-black font-sans text-white'>
         <Stack className='gap-36 overflow-hidden pb-36'>
-          <div className='relative bg-zinc-900 z-0 overflow-hidden'>
-            <Center>
-              <Stack className='px-8 py-16 xl:px-64 lg:px-32 md:px-16 2xl:py-32 z-10 gap-8'>
-                <h1 className='text-6xl 2xl:text-8xl md:text-7xl font-bold max-w-4xl leading-snug z-10 text-center'>
-                  Diponegoro <span className='text-afblue'>UI/UX</span> Competition
-                </h1>
-                <h2 className='text-2xl font-light z-10 text-center'>Revolt, be creative, be different.</h2>
-                <Center>
-                  <Group className='gap-2 z-10'>
-                    <Button primary>Daftar sekarang</Button>
-                    <Button>Rulebook</Button>
-                  </Group>
-                </Center>
-              </Stack>
-            </Center>
-            <img
-              className='absolute left-[-100px] top-[200px] sm:top-[0px] lg:left-0 xl:top-[150px] z-0 md:w-[700px] xl:right-24'
-              src='/images/abs3.png'
-            />
+          <div
+            className='relative z-0 overflow-hidden bg-cover'
+            style={{ backgroundImage: "url('/svgs/bg-grad-3.svg')" }}
+          >
+            <div style={{ backdropFilter: 'brightness(50%)' }}>
+              <Center>
+                <Stack className='px-8 py-16 xl:px-64 lg:px-32 md:px-16 2xl:py-32 z-10 gap-8'>
+                  <h1 className='text-6xl 2xl:text-8xl md:text-7xl font-bold max-w-4xl leading-snug z-10 text-center'>
+                    Diponegoro <span className='text-afblue'>UI/UX</span> Competition
+                  </h1>
+                  <h2 className='text-2xl font-light z-10 text-center'>Revolt, be creative, be different.</h2>
+                  <Center>
+                    <Group className='gap-2 z-10'>
+                      <Button primary>Daftar sekarang</Button>
+                      <Button>Rulebook</Button>
+                    </Group>
+                  </Center>
+                </Stack>
+              </Center>
+            </div>
           </div>
 
           <Stack align='center' className='z-10 px-8 gap-4'>

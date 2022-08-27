@@ -4,7 +4,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        afblue: '#286DF1'
+        afblue: '#286DF1',
+        'afblue-dark': '#2462D9',
+        'afblue-darker': '#2057C1',
+        'afblue-light': '#3E7CF3',
+        'afblue-lighter': '#538AF4'
       }
     }
   },

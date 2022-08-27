@@ -30,25 +30,31 @@ const Home: NextPage = () => {
     <>
       <div className='relative min-h-screen bg-black font-sans text-white overflow-hidden'>
         <Stack className='gap-36  overflow-hidden'>
-          <div className='relative bg-zinc-900 z-0 overflow-hidden'>
-            <Stack className='px-8 py-16 xl:px-64 lg:px-32 md:px-16 2xl:py-32 z-10 gap-8'>
-              <h1 className='text-6xl 2xl:text-8xl md:text-7xl font-bold max-w-4xl leading-snug z-10'>
-                Annual <span className='text-afblue'>Informatics</span> Competition 2022
-              </h1>
-              <h2 className='text-2xl font-light z-10'>
-                Overcome the <span className='text-afblue font-semibold'>infinity</span>
-              </h2>
-              <Group className='gap-2 z-10'>
-                <Button primary onClick={() => router.push('https://app.anforcom.com/auth/register')}>
-                  Daftar sekarang
-                </Button>
-                <Button onClick={() => router.push('https://app.anforcom.com/auth/login')}>Masuk</Button>
-              </Group>
-            </Stack>
-            <img
+          <div
+            className='relative z-0 overflow-hidden bg-cover'
+            style={{ backgroundColor: 'rgba(0, 0, 0, 1)', backgroundImage: "url('/svgs/bg-grad-1.svg')" }}
+          >
+            <div style={{ backdropFilter: 'brightness(50%)' }}>
+              <Stack className='px-8 py-16 xl:px-64 lg:px-32 md:px-16 2xl:py-32 z-10 gap-8'>
+                <h1 className='text-6xl 2xl:text-8xl md:text-7xl font-bold max-w-4xl leading-snug z-10'>
+                  Annual <span className='text-afblue'>Informatics</span> Competition 2022
+                </h1>
+                <h2 className='text-2xl font-light z-10'>
+                  Overcome the <span className='text-afblue font-semibold'>infinity</span>
+                </h2>
+                <Group className='gap-2 z-10'>
+                  <Button primary onClick={() => router.push('https://app.anforcom.com/auth/register')}>
+                    Daftar sekarang
+                  </Button>
+                  <Button onClick={() => router.push('https://app.anforcom.com/auth/login')}>Masuk</Button>
+                </Group>
+              </Stack>
+            </div>
+            {/* <img src='/svgs/wavesbg2.svg' className='absolute top-[-96px] brightness-50' /> */}
+            {/* <img
               className='absolute right-[-225px] top-16 z-0 md:w-[700px] xl:right-[-172px] xl:top-0 2xl:right-24'
               src='/images/abs1.png'
-            />
+            /> */}
           </div>
 
           <Stack align='center' className='z-10 px-8 gap-4'>
@@ -108,7 +114,7 @@ const Home: NextPage = () => {
               </Group>
             </Stack>
             <img
-              className='absolute right-0 top-[100px] sm:top-[-50px] md:top-[-100px] lg:top-[-150px] xl:top-[-200px] 2xl:top-[-250px] -z-10'
+              className='absolute right-0 min-w-[500px] top-[150px] sm:top-[-50px] md:top-[-100px] lg:top-[-150px] xl:top-[-200px] 2xl:top-[-250px] -z-10'
               src='/images/abs2.png'
             />
           </div>
