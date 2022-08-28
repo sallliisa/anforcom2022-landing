@@ -7,10 +7,7 @@ type Props = React.HTMLAttributes<HTMLDivElement> & {
 export function Card({ children, className, ...others }: Props) {
   return (
     <>
-      <div
-        className={`bg-neutral-900/80 backdrop-blur-lg rounded-md border border-neutral-400/20 ${className}`}
-        {...others}
-      >
+      <div className={`bg-main-dark-grey backdrop-blur-lg rounded-md ${className}`} {...others}>
         {children}
       </div>
     </>

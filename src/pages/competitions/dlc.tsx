@@ -54,7 +54,7 @@ const DLC: NextPage = () => {
         <Stack className='gap-36 overflow-hidden pb-36'>
           <div
             className='relative z-0 overflow-hidden bg-cover'
-            style={{ backgroundImage: "url('/svgs/bg-grad-2.svg')" }}
+            style={{ backgroundImage: "url('/svgs/newset/bg-grad-3.svg')" }}
           >
             <div style={{ backdropFilter: 'brightness(50%)' }}>
               <Center>

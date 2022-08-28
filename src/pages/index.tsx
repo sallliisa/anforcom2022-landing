@@ -32,9 +32,13 @@ const Home: NextPage = () => {
         <Stack className='gap-36  overflow-hidden'>
           <div
             className='relative z-0 overflow-hidden bg-cover'
-            style={{ backgroundColor: 'rgba(0, 0, 0, 1)', backgroundImage: "url('/svgs/bg-grad-1.svg')" }}
+            style={{ backgroundColor: 'rgba(0, 0, 0, 1)', backgroundImage: "url('/svgs/newset/bg-grad-1.svg')" }}
           >
             <div style={{ backdropFilter: 'brightness(50%)' }}>
+              <img
+                src='/svgs/newset/anforcom.svg'
+                className='absolute top-[386px] scale-150 sm:scale-100 sm:top-[128px] sm:right-[-64px] md:top-[64px] brightness-50 -z-1'
+              />
               <Stack className='px-8 py-16 xl:px-64 lg:px-32 md:px-16 2xl:py-32 z-10 gap-8'>
                 <h1 className='text-6xl 2xl:text-8xl md:text-7xl font-bold max-w-4xl leading-snug z-10'>
                   Annual <span className='text-afblue'>Informatics</span> Competition 2022
@@ -50,7 +54,7 @@ const Home: NextPage = () => {
                 </Group>
               </Stack>
             </div>
-            {/* <img src='/svgs/wavesbg2.svg' className='absolute top-[-96px] brightness-50' /> */}
+
             {/* <img
               className='absolute right-[-225px] top-16 z-0 md:w-[700px] xl:right-[-172px] xl:top-0 2xl:right-24'
               src='/images/abs1.png'
@@ -90,7 +94,7 @@ const Home: NextPage = () => {
                 <>
                   <Card
                     onClick={() => router.push(data.link)}
-                    className='p-8 h-[450px] min-w-[350px] hover:scale-[0.99] active:scale-[0.95] active:bg-neutral-800/90 cursor-pointer'
+                    className='p-8 h-[450px] min-w-[350px] hover:scale-[0.99] hover:bg-main-dark-grey-active active:scale-[0.95] active:bg-neutral-800/90 cursor-pointer'
                   >
                     <Stack align='center' className='justify-between min-h-full'>
                       <img src={data.img} className='mt-8' />
@@ -104,19 +108,20 @@ const Home: NextPage = () => {
             </Group>
           </Stack>
 
-          <div className='relative bg-zinc-900 z-0 overflow-hidden'>
-            <Stack className='px-8 py-16 xl:px-64 lg:px-32 md:px-16 2xl:py-32 z-10 gap-16'>
-              <h1 className='text-6xl 2xl:text-8xl md:text-7xl font-bold max-w-3xl '>
-                Prepare yourselves, and get <span className='text-afblue'>ready.</span>
-              </h1>
-              <Group>
-                <Button primary>Daftar sekarang</Button>
-              </Group>
-            </Stack>
-            <img
-              className='absolute right-0 min-w-[500px] top-[150px] sm:top-[-50px] md:top-[-100px] lg:top-[-150px] xl:top-[-200px] 2xl:top-[-250px] -z-10'
-              src='/images/abs2.png'
-            />
+          <div
+            className='relative z-0 overflow-hidden'
+            style={{ backgroundImage: "url('/svgs/newset/bg-grad-5.svg')" }}
+          >
+            <div style={{ backdropFilter: 'brightness(50%)' }}>
+              <Stack className='px-8 py-16 xl:px-64 lg:px-32 md:px-16 2xl:py-32 z-10 gap-16'>
+                <h1 className='text-6xl 2xl:text-8xl md:text-7xl font-bold max-w-3xl '>
+                  Prepare yourselves, and get <span className='text-afblue'>ready.</span>
+                </h1>
+                <Group>
+                  <Button primary>Daftar sekarang</Button>
+                </Group>
+              </Stack>
+            </div>
           </div>
         </Stack>
       </div>

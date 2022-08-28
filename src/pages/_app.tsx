@@ -12,6 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <LazyMotion features={domAnimation}>
         <Head>
           <meta name='viewport' content='minimum-scale=1, initial-scale=1, width=device-width' />
+          <meta name='color-scheme' content='only light' />
           <title>Create Next App</title>
           <link rel='icon' href='/favicon.ico' />
         </Head>

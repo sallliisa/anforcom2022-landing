@@ -10,7 +10,7 @@ export interface PublicLayoutProps {
 export default function PublicLayout({ children, pageTitle }: PublicLayoutProps) {
   return (
     <>
-      <div className='bg-zinc-900'>
+      <div className='bg-main-dark-grey'>
         <Navbar />
         <PageTransition>
           {children}

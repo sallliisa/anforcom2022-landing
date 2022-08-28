@@ -42,17 +42,17 @@ export default function Navbar() {
               {popover && (
                 <>
                   <FadeTransY control={popover}>
-                    <Box className='absolute bg-zinc-800 p-2 text-sm w-64 top-12 left-[-64px] rounded-lg drop-shadow-lg'>
+                    <Box className='absolute bg-main-dark-grey p-2 text-sm w-64 top-12 left-[-64px] rounded-lg drop-shadow-lg'>
                       <Stack className='gap-1'>
                         <Box
                           onClick={() => router.push('/competitions/duc')}
-                          className='p-2 hover:bg-zinc-900 rounded-lg'
+                          className='p-2 hover:bg-black/50 rounded-lg'
                         >
                           <Box className='text-white font-normal hover:text-white'>Diponegoro UI/UX Competition</Box>
                         </Box>
                         <Box
                           onClick={() => router.push('/competitions/dlc')}
-                          className='p-2 hover:bg-zinc-900 rounded-lg'
+                          className='p-2 hover:bg-black/50 rounded-lg'
                         >
                           <Box className='text-white font-normal hover:text-white'>Diponegoro Logic Competition</Box>
                         </Box>

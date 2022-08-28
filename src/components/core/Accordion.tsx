@@ -24,7 +24,7 @@ export function Accordion({ children, title, className, ...others }: Props) {
         <div
           onClick={() => setIsOpen(!isOpen)}
           className={`${
-            isOpen ? `bg-afblue hover:bg-afblue/80` : `bg-neutral-900/80 hover:bg-neutral-900/50`
+            isOpen ? `bg-afblue hover:bg-afblue/80` : `bg-main-dark-grey hover:bg-main-dark-grey-active`
           } rounded-md p-4 w-full cursor-pointer ${className}`}
           {...others}
         >
