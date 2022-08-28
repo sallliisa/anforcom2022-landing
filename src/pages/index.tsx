@@ -89,7 +89,7 @@ const Home: NextPage = () => {
               </h2>
             </Box>
 
-            <Group className='overflow-x-visible gap-4 whitespace-normal overflow-auto w-[100vw] px-4 lg:overflow-hidden lg:px-32 lg:justify-center no-scrollbar'>
+            <Group className='overflow-x-visible gap-4 whitespace-normal overflow-auto w-[100vw] px-8 lg:overflow-hidden lg:px-32 lg:justify-center no-scrollbar'>
               {carouselItems.map((data) => (
                 <>
                   <Card
