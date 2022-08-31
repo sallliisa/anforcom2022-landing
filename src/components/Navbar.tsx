@@ -21,9 +21,7 @@ export default function Navbar() {
             key={id}
             onClick={() => router.push(routes[0].link)}
             className={`hover:text-neutral-300 ${
-              isActive(routes[0].route, router)
-                ? 'font-semibold bg-afblue rounded-full hover:text-white'
-                : 'font-normal'
+              isActive(routes[0].route, router) ? 'font-semibold bg-afblue rounded-full hover:text-white' : 'font-light'
             } cursor-pointer px-4 py-1`}
           >
             {routes[0].text}
@@ -32,9 +30,7 @@ export default function Navbar() {
             key={id}
             onClick={() => setPopover(!popover)}
             className={`hover:text-neutral-300 ${
-              isActive(routes[1].route, router)
-                ? 'font-semibold bg-afblue rounded-full hover:text-white'
-                : 'font-normal'
+              isActive(routes[1].route, router) ? 'font-semibold bg-afblue rounded-full hover:text-white' : 'font-light'
             } cursor-pointer px-4 py-1 relative`}
           >
             Competitions
@@ -67,9 +63,7 @@ export default function Navbar() {
             key={id}
             onClick={() => router.push(routes[2].link)}
             className={`hover:text-neutral-300 ${
-              isActive(routes[2].route, router)
-                ? 'font-semibold bg-afblue rounded-full hover:text-white'
-                : 'font-normal'
+              isActive(routes[2].route, router) ? 'font-semibold bg-afblue rounded-full hover:text-white' : 'font-light'
             } cursor-pointer px-4 py-1`}
           >
             {routes[2].text}
@@ -78,9 +72,7 @@ export default function Navbar() {
             key={id}
             onClick={() => router.push(routes[3].link)}
             className={`hover:text-neutral-300 ${
-              isActive(routes[3].route, router)
-                ? 'font-semibold bg-afblue rounded-full hover:text-white'
-                : 'font-normal'
+              isActive(routes[3].route, router) ? 'font-semibold bg-afblue rounded-full hover:text-white' : 'font-light'
             } cursor-pointer px-4 py-1`}
           >
             {routes[3].text}

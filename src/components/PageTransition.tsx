@@ -32,7 +32,8 @@ const PageTransition = ({ children }: PageTransitionProps) => {
       exit='exit'
       transition={{
         duration: 0.25,
-        type: 'tween'
+        type: 'tween',
+        ease: 'anticipate'
       }}
     >
       {children}

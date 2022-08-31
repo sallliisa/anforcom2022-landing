@@ -40,7 +40,7 @@ const Home: NextPage = () => {
                 className='absolute top-[386px] scale-150 sm:scale-100 sm:top-[128px] sm:right-[-64px] md:top-[64px] brightness-50 -z-1'
               />
               <Stack className='px-8 py-16 xl:px-64 lg:px-32 md:px-16 2xl:py-32 z-10 gap-8'>
-                <h1 className='text-6xl 2xl:text-8xl md:text-7xl font-bold max-w-4xl leading-snug z-10'>
+                <h1 className='text-6xl 2xl:text-8xl md:text-7xl font-bold max-w-5xl leading-snug z-10'>
                   Annual <span className='text-afblue'>Informatics</span> Competition 2022
                 </h1>
                 <h2 className='text-2xl font-light z-10'>
@@ -54,11 +54,6 @@ const Home: NextPage = () => {
                 </Group>
               </Stack>
             </div>
-
-            {/* <img
-              className='absolute right-[-225px] top-16 z-0 md:w-[700px] xl:right-[-172px] xl:top-0 2xl:right-24'
-              src='/images/abs1.png'
-            /> */}
           </div>
 
           <Stack align='center' className='z-10 px-8 gap-4'>

@@ -131,14 +131,14 @@ const DUC: NextPage = () => {
               <Group
                 className='items-center gap-8 whitespace-normal'
                 style={{
-                  transform: `translateX(-${timelineItem * 680}px)`,
+                  transform: `translateX(-${timelineItem * 720}px)`,
                   transition: 'transform 0.3s'
                 }}
               >
                 <div className='ml-0 2xl:ml-64 xl:ml-32 md:ml-16'></div>
                 {timelineItems.map((data, idx) => (
                   <>
-                    <Box className='min-w-[360px]'>
+                    <Box className='min-w-[400px]'>
                       <div>
                         <h1
                           className={`text-5xl md:text-6xl font-bold break-words ${

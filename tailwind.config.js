@@ -11,6 +11,9 @@ module.exports = {
         'afblue-lighter': '#538AF4',
         'main-dark-grey': '#17181B',
         'main-dark-grey-active': '#121316'
+      },
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif']
       }
     }
   },

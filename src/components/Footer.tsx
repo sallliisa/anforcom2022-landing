@@ -18,17 +18,17 @@ export default function Footer() {
               <IconMail
                 stroke={1.5}
                 onClick={() => router.push('mailto:webmaster@example.com')}
-                className='cursor-pointer'
+                className='cursor-pointer hover:stroke-afblue'
               />
               <IconBrandInstagram
                 stroke={1.5}
                 onClick={() => router.push('https://www.instagram.com/anforcom/')}
-                className='cursor-pointer'
+                className='cursor-pointer hover:stroke-afblue'
               />
               <IconBrandWhatsapp
                 stroke={1.5}
                 onClick={() => router.push('https://wa.me/6285641518460')}
-                className='cursor-pointer'
+                className='cursor-pointer hover:stroke-afblue'
               />
             </Group>
           </Group>
