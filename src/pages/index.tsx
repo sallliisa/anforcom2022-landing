@@ -40,7 +40,7 @@ const Home: NextPage = () => {
                 className='absolute top-[386px] scale-150 sm:scale-100 sm:top-[128px] sm:right-[-64px] md:top-[64px] brightness-50 -z-1'
               />
               <Stack className='px-8 py-16 xl:px-64 lg:px-32 md:px-16 2xl:py-32 z-10 gap-8'>
-                <h1 className='text-6xl 2xl:text-8xl md:text-7xl font-bold max-w-5xl leading-snug z-10'>
+                <h1 className='text-5xl 2xl:text-8xl md:text-7xl font-bold max-w-5xl leading-snug z-10'>
                   Annual <span className='text-afblue'>Informatics</span> Competition 2022
                 </h1>
                 <h2 className='text-2xl font-light z-10'>
@@ -84,7 +84,7 @@ const Home: NextPage = () => {
               </h2>
             </Box>
 
-            <Group className='overflow-x-visible gap-4 whitespace-normal overflow-auto w-[100vw] px-8 lg:overflow-hidden lg:px-32 lg:justify-center no-scrollbar'>
+            <Group className='overflow-x-visible gap-4 whitespace-normal overflow-auto w-[100vw] px-8 lg:overflow-hidden lg:px-32 lg:justify-center'>
               {carouselItems.map((data) => (
                 <>
                   <Card

@@ -29,7 +29,7 @@ export function Accordion({ children, title, className, ...others }: Props) {
           {...others}
         >
           <Group justify='between' className='items-center gap-4'>
-            <h1 className='font-semibold text-white'>{title}</h1>
+            <h1 className='text-white font-medium'>{title}</h1>
             <m.div animate={{ rotate: isOpen ? 180 : 0 }}>
               <IconChevronDown />
             </m.div>

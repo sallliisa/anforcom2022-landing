@@ -59,7 +59,7 @@ const DLC: NextPage = () => {
             <div style={{ backdropFilter: 'brightness(50%)' }}>
               <Center>
                 <Stack className='px-8 py-16 xl:px-64 lg:px-32 md:px-16 2xl:py-32 z-10 gap-8'>
-                  <h1 className='text-6xl 2xl:text-8xl md:text-7xl font-bold max-w-4xl leading-snug z-10 text-center'>
+                  <h1 className='text-5xl 2xl:text-8xl md:text-7xl font-bold max-w-4xl leading-snug z-10 text-center'>
                     Diponegoro <span className='text-afblue'>Logic</span> Competition
                   </h1>
                   <h2 className='text-2xl font-light z-10 text-center'>Breaking the logic gate.</h2>
@@ -92,7 +92,7 @@ const DLC: NextPage = () => {
                 <IconCircle1 className='stroke-afblue/20 -z-1' size={225} />
                 <Stack align='center' className='mt-[-64px]'>
                   <h2 className='text-xs tracking-[0.5rem]'>FIRST PLACE</h2>
-                  <h1 className='text-afblue text-6xl font-bold max-w-3xl'>Rp3.500.000</h1>
+                  <h1 className='text-afblue text-5xl font-bold max-w-3xl'>Rp3.500.000</h1>
                 </Stack>
               </Stack>
 

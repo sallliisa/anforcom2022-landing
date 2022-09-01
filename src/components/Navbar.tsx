@@ -31,7 +31,7 @@ export default function Navbar() {
             onClick={() => setPopover(!popover)}
             className={`hover:text-neutral-300 ${
               isActive(routes[1].route, router) ? 'font-semibold bg-afblue rounded-full hover:text-white' : 'font-light'
-            } cursor-pointer px-4 py-1 relative`}
+            } cursor-pointer px-3 sm:px-4 py-1 relative`}
           >
             Competitions
             <AnimatePresence>

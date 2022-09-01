@@ -70,7 +70,7 @@ const DUC: NextPage = () => {
             <div style={{ backdropFilter: 'brightness(50%)' }}>
               <Center>
                 <Stack className='px-8 py-16 xl:px-64 lg:px-32 md:px-16 2xl:py-32 z-10 gap-8'>
-                  <h1 className='text-6xl 2xl:text-8xl md:text-7xl font-bold max-w-4xl leading-snug z-10 text-center'>
+                  <h1 className='text-5xl 2xl:text-8xl md:text-7xl font-bold max-w-4xl leading-snug z-10 text-center'>
                     Diponegoro <span className='text-afblue'>UI/UX</span> Competition
                   </h1>
                   <h2 className='text-2xl font-light z-10 text-center'>Revolt, be creative, be different.</h2>
@@ -102,7 +102,7 @@ const DUC: NextPage = () => {
                 <IconCircle1 className='stroke-afblue/20 -z-1' size={225} />
                 <Stack align='center' className='mt-[-64px]'>
                   <h2 className='text-xs tracking-[0.5rem]'>FIRST PLACE</h2>
-                  <h1 className='text-afblue text-6xl font-bold max-w-3xl'>Rp3.500.000</h1>
+                  <h1 className='text-afblue text-5xl font-bold max-w-3xl'>Rp3.500.000</h1>
                 </Stack>
               </Stack>
 
@@ -131,24 +131,24 @@ const DUC: NextPage = () => {
               <Group
                 className='items-center gap-8 whitespace-normal'
                 style={{
-                  transform: `translateX(-${timelineItem * 720}px)`,
+                  transform: `translateX(-${timelineItem * 700}px)`,
                   transition: 'transform 0.3s'
                 }}
               >
                 <div className='ml-0 2xl:ml-64 xl:ml-32 md:ml-16'></div>
                 {timelineItems.map((data, idx) => (
                   <>
-                    <Box className='min-w-[400px]'>
+                    <Box className='min-w-[380px]'>
                       <div>
                         <h1
-                          className={`text-5xl md:text-6xl font-bold break-words ${
+                          className={`text-4xl md:text-6xl font-bold break-words ${
                             data.isActive ? `text-afblue` : `text-zinc-900/80`
                           }`}
                         >
                           {data.title}
                         </h1>
                       </div>
-                      <h2 className={`text-xl mt-8 ${!data.isActive ? 'text-zinc-900/80' : ''}`}>{data.date}</h2>
+                      <h2 className={`text-lg mt-8 ${!data.isActive ? 'text-zinc-900/80' : ''}`}>{data.date}</h2>
                     </Box>
                     {idx != timelineItems.length - 1 && <div className='h-1 min-w-[256px] bg-zinc-600/20'></div>}
                   </>
