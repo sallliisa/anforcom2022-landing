@@ -105,7 +105,7 @@ const DUC: NextPage = () => {
             <img src='/images/hires/duc.png' className='mt-0 max-w-[300px] md:min-w-[400px]' />
             <Stack className='gap-4 z-50 justify-center items-center px-8 md:justify-start md:items-start'>
               <h1 className='text-4xl font-bold'>
-                Tentang <span className='text-afblue'>DUC</span>
+                Apa itu <span className='text-afblue'>DUC?</span>
               </h1>
               <p className='text-md max-w-3xl text-[#888] text-center md:text-start'>
                 UI/UX adalah salah satu cabang lomba dari serangkaian kegiatan Anforcom 2022 yang dapat diikuti oleh
