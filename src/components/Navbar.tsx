@@ -38,7 +38,7 @@ export default function Navbar() {
               {popover && (
                 <>
                   <FadeTransY control={popover}>
-                    <Box className='absolute z-50 bg-main-dark-grey p-2 text-sm w-64 top-12 left-[-64px] rounded-lg drop-shadow-lg'>
+                    <Box className='absolute bg-main-dark-grey p-2 text-sm w-64 top-12 left-[-64px] rounded-lg drop-shadow-lg'>
                       <Stack className='gap-1'>
                         <Box
                           onClick={() => router.push('/competitions/duc')}

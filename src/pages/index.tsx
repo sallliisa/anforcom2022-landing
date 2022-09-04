@@ -31,8 +31,8 @@ const Home: NextPage = () => {
     <>
       <div className='relative min-h-screen bg-black font-sans text-white overflow-hidden'>
         <Stack className='gap-36 overflow-hidden'>
-          <div className='relative overflow-hidden bg-cover z-50'>
-            <div style={{ backdropFilter: 'brightness(50%)' }}>
+          <div className='relative overflow-hidden bg-cover z-10'>
+            <div style={{ backdropFilter: 'brightness(50%)' }} className='z-10'>
               <img
                 src='/svgs/newset/anforcom.svg'
                 className='absolute top-[386px] scale-150 sm:scale-100 sm:top-[128px] sm:right-[-64px] md:top-[64px] brightness-50 z-10'
