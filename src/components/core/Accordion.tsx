@@ -56,7 +56,7 @@ export function Accordion({ children, title, className, ...others }: Props) {
                   transition={{ duration: 0.1 }}
                 >
                   <div className='text-sm font-normal px-4'>
-                    <div className=''>{children}</div>
+                    <div className='text-[#888]'>{children}</div>
                   </div>
                 </m.div>
               </div>

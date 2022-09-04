@@ -1,13 +1,9 @@
-import { Center, Group, Box, Stack, Anchor } from './core'
-import { NextRouter, useRouter } from 'next/router'
-import { routes } from 'routes/routes'
-import { useId, useState } from 'react'
-import { IconBrandDiscord, IconBrandInstagram, IconBrandWhatsapp, IconMail } from '@tabler/icons'
+import { Group, Box } from './core'
+import { useRouter } from 'next/router'
+import { IconBrandInstagram, IconBrandWhatsapp, IconMail } from '@tabler/icons'
 
 export default function Footer() {
-  const id = useId()
   const router = useRouter()
-  const [popover, setPopover] = useState(false)
   return (
     <>
       <Box className='h-12 bg-black text-white'>

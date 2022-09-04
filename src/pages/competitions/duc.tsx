@@ -4,11 +4,17 @@ import { IconChevronLeft, IconChevronRight, IconCircle1, IconCircle2, IconCircle
 import { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom'
 import { m, Variants } from 'framer-motion'
+import GradientAnimation from 'components/GradientBackgroundAnim'
+import GradientBackgroundAnim from 'components/GradientBackgroundAnim'
 
 const timelineItems = [
   { title: 'Registration: 1st Batch', date: '5 August - 28 August', isActive: true },
   { title: 'Registration: 2nd Batch', date: '1 September - 23 September', isActive: false },
-  { title: 'UI/UX Competition Proposal Submission', date: '5 August - 25 September', isActive: false },
+  {
+    title: 'DUC Proposal Submission',
+    date: '5 August - 25 September',
+    isActive: false
+  },
   { title: 'Finalists Announcement', date: '3 October 2022', isActive: false },
   { title: 'Technical Meeting: Final Day', date: '5 October 2022', isActive: false },
   { title: 'Anforcom 2022 Grand Final', date: '8 October 2022', isActive: false }
@@ -63,15 +69,17 @@ const DUC: NextPage = () => {
     <>
       <div className='relative min-h-screen bg-black font-sans text-white'>
         <Stack className='gap-36 overflow-hidden pb-36'>
-          <div
-            className='relative z-0 overflow-hidden bg-cover'
-            style={{ backgroundImage: "url('/svgs/newset/bg-grad-2.svg')" }}
-          >
+          <div className='relative overflow-hidden z-50'>
             <div style={{ backdropFilter: 'brightness(50%)' }}>
               <Center>
+                <GradientBackgroundAnim color1='#FE6099' color2='#F1AB28' color3='#F1AB28' />
                 <Stack className='px-8 py-16 xl:px-64 lg:px-32 md:px-16 2xl:py-32 z-10 gap-8'>
                   <h1 className='text-5xl 2xl:text-8xl md:text-7xl font-bold max-w-4xl leading-snug z-10 text-center'>
-                    Diponegoro <span className='text-afblue'>UI/UX</span> Competition
+                    Diponegoro{' '}
+                    <span className='bg-gradient-to-r text-transparent bg-clip-text from-afblue to-afblue-lighter'>
+                      UI/UX
+                    </span>{' '}
+                    Competition
                   </h1>
                   <h2 className='text-2xl font-light z-10 text-center'>Revolt, be creative, be different.</h2>
                   <Center>
@@ -85,16 +93,19 @@ const DUC: NextPage = () => {
             </div>
           </div>
 
-          <Stack align='center' className='z-10 px-8 gap-4'>
-            <h1 className='text-4xl font-bold text-center'>
-              Tentang <span className='text-afblue'>DUC</span>
-            </h1>
-            <p className='text-md max-w-3xl text-center'>
-              UI/UX adalah salah satu cabang lomba dari serangkaian kegiatan Anforcom 2022 yang dapat diikuti oleh
-              mahasiswa se-Indonesia. Kegiatan ini berupa kompetisi desain antarmuka sistem/produk yang berorientasi
-              pada kenyamanan dan kemudahan pengguna dalam menggunakan sistem/produk tersebut.
-            </p>
-          </Stack>
+          <div className='flex flex-col gap-0 items-center justify-center md:flex-row md:inline-flex md:gap-8'>
+            <img src='/images/hires/duc.png' className='mt-0 max-w-[300px] md:min-w-[400px]' />
+            <Stack className='gap-4 z-50 justify-center items-center px-8 md:justify-start md:items-start'>
+              <h1 className='text-4xl font-bold'>
+                Tentang <span className='text-afblue'>DUC</span>
+              </h1>
+              <p className='text-md max-w-3xl text-[#888] text-center md:text-start'>
+                UI/UX adalah salah satu cabang lomba dari serangkaian kegiatan Anforcom 2022 yang dapat diikuti oleh
+                mahasiswa se-Indonesia. Kegiatan ini berupa kompetisi desain antarmuka sistem/produk yang berorientasi
+                pada kenyamanan dan kemudahan pengguna dalam menggunakan sistem/produk tersebut.
+              </p>
+            </Stack>
+          </div>
 
           <Box className='px-8'>
             <Grid type='cols' amount='1' className='gap-4'>
@@ -108,7 +119,7 @@ const DUC: NextPage = () => {
 
               <Group justify='center' className='gap-8'>
                 <Stack align='center'>
-                  <IconCircle2 className='stroke-[#101012] -z-1' size={width > 1299 ? 225 : 128} />
+                  <IconCircle2 className='stroke-[#333] -z-1' size={width > 1299 ? 225 : 128} />
                   <Stack align='center' className='mt-[-36px]'>
                     <h2 className='text-xs tracking-[0.25rem] text-center'>SECOND PLACE</h2>
                     <h1 className='text-xl font-bold max-w-3xl'>Rp2.500.000</h1>
@@ -116,7 +127,7 @@ const DUC: NextPage = () => {
                 </Stack>
 
                 <Stack align='center'>
-                  <IconCircle3 className='stroke-[#101012] -z-1' size={width > 1299 ? 225 : 128} />
+                  <IconCircle3 className='stroke-[#333] -z-1' size={width > 1299 ? 225 : 128} />
                   <Stack align='center' className='mt-[-36px]'>
                     <h2 className='text-xs tracking-[0.25rem] text-center'>THIRD PLACE</h2>
                     <h1 className='text-xl font-bold max-w-3xl'>Rp1.500.000</h1>
@@ -131,26 +142,26 @@ const DUC: NextPage = () => {
               <Group
                 className='items-center gap-8 whitespace-normal'
                 style={{
-                  transform: `translateX(-${timelineItem * 700}px)`,
+                  transform: `translateX(-${timelineItem * 720}px)`,
                   transition: 'transform 0.3s'
                 }}
               >
                 <div className='ml-0 2xl:ml-64 xl:ml-32 md:ml-16'></div>
                 {timelineItems.map((data, idx) => (
                   <>
-                    <Box className='min-w-[380px]'>
+                    <Box className='min-w-[400px]'>
                       <div>
                         <h1
                           className={`text-4xl md:text-6xl font-bold break-words ${
-                            data.isActive ? `text-afblue` : `text-zinc-900/80`
+                            data.isActive ? `text-afblue` : `text-[#333]`
                           }`}
                         >
                           {data.title}
                         </h1>
                       </div>
-                      <h2 className={`text-lg mt-8 ${!data.isActive ? 'text-zinc-900/80' : ''}`}>{data.date}</h2>
+                      <h2 className={`text-lg mt-8 ${!data.isActive ? 'text-[#333]' : ''}`}>{data.date}</h2>
                     </Box>
-                    {idx != timelineItems.length - 1 && <div className='h-1 min-w-[256px] bg-zinc-600/20'></div>}
+                    {idx != timelineItems.length - 1 && <div className='h-1 min-w-[256px] bg-[#333]'></div>}
                   </>
                 ))}
               </Group>

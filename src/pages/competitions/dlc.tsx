@@ -2,12 +2,13 @@ import { Button, Card, Group, Stack, Box, Grid, Center, Anchor, Accordion } from
 import type { NextPage } from 'next'
 import { IconChevronLeft, IconChevronRight, IconCircle1, IconCircle2, IconCircle3 } from '@tabler/icons'
 import { useEffect, useState } from 'react'
-import ReactDOM from 'react-dom'
+import GradientAnimation from 'components/GradientBackgroundAnim'
+import GradientBackgroundAnim from 'components/GradientBackgroundAnim'
 
 const timelineItems = [
   { title: 'Registration: 1st Batch', date: '5 August - 28 August', isActive: true },
   { title: 'Registration: 2nd Batch', date: '1 September - 23 September', isActive: false },
-  { title: 'Logic Competition Elimination Phase', date: '1 October - 3 October', isActive: false },
+  { title: 'DUC Elimination Phase', date: '1 October - 3 October', isActive: false },
   { title: 'Finalists Announcement', date: '3 October 2022', isActive: false },
   { title: 'Technical Meeting: Final Day', date: '5 October 2022', isActive: false },
   { title: 'Anforcom 2022 Grand Final', date: '8 October 2022', isActive: false }
@@ -52,15 +53,17 @@ const DLC: NextPage = () => {
     <>
       <div className='relative min-h-screen bg-black font-sans text-white'>
         <Stack className='gap-36 overflow-hidden pb-36'>
-          <div
-            className='relative z-0 overflow-hidden bg-cover'
-            style={{ backgroundImage: "url('/svgs/newset/bg-grad-3.svg')" }}
-          >
+          <div className='relative overflow-hidden z-50'>
             <div style={{ backdropFilter: 'brightness(50%)' }}>
               <Center>
+                <GradientBackgroundAnim color1='#FE6099' color2='#F1AB28' color3='#F1AB28' />
                 <Stack className='px-8 py-16 xl:px-64 lg:px-32 md:px-16 2xl:py-32 z-10 gap-8'>
                   <h1 className='text-5xl 2xl:text-8xl md:text-7xl font-bold max-w-4xl leading-snug z-10 text-center'>
-                    Diponegoro <span className='text-afblue'>Logic</span> Competition
+                    Diponegoro{' '}
+                    <span className='bg-gradient-to-r text-transparent bg-clip-text from-afblue to-afblue-lighter'>
+                      Logic
+                    </span>{' '}
+                    Competition
                   </h1>
                   <h2 className='text-2xl font-light z-10 text-center'>Breaking the logic gate.</h2>
                   <Center>
@@ -74,17 +77,20 @@ const DLC: NextPage = () => {
             </div>
           </div>
 
-          <Stack align='center' className='z-10 px-8 gap-4'>
-            <h1 className='text-4xl font-bold text-center'>
-              Tentang <span className='text-afblue'>DLC</span>
-            </h1>
-            <p className='text-md max-w-3xl text-center'>
-              Diponegoro Logic Competition adalah salah satu cabang lomba dari serangkaian kegiatan Anforcom 2022 yang
-              dapat diikuti oleh mahasiswa se-Indonesia. Kegiatan ini bertujuan untuk mengasah kemampuan berpikir logis
-              dan kemampuan problem solving secara kompetitif. Kompetisi ini terdiri dari 2 tahap, yaitu tahap
-              penyisihan berupa cerdas cermat dan tahap final berupa Rally Games dan Competitive Programming.
-            </p>
-          </Stack>
+          <div className='flex flex-col gap-0 items-center justify-center md:flex-row md:inline-flex md:gap-8'>
+            <img src='/images/hires/dlc.png' className='mt-0 max-w-[300px] md:min-w-[400px]' />
+            <Stack className='gap-4 z-50 justify-center items-center px-8 md:justify-start md:items-start'>
+              <h1 className='text-4xl font-bold'>
+                Tentang <span className='text-afblue'>DLC</span>
+              </h1>
+              <p className='text-md max-w-3xl text-[#888] text-center md:text-start'>
+                Diponegoro Logic Competition adalah salah satu cabang lomba dari serangkaian kegiatan Anforcom 2022 yang
+                dapat diikuti oleh mahasiswa se-Indonesia. Kegiatan ini bertujuan untuk mengasah kemampuan berpikir
+                logis dan kemampuan problem solving secara kompetitif. Kompetisi ini terdiri dari 2 tahap, yaitu tahap
+                penyisihan berupa cerdas cermat dan tahap final berupa Rally Games dan Competitive Programming.
+              </p>
+            </Stack>
+          </div>
 
           <Box className='px-8'>
             <Grid type='cols' amount='1' className='gap-4'>
@@ -131,7 +137,7 @@ const DLC: NextPage = () => {
                     <Box className='min-w-[400px]'>
                       <div>
                         <h1
-                          className={`text-5xl md:text-6xl font-bold break-words ${
+                          className={`text-4xl md:text-6xl font-bold break-words ${
                             data.isActive ? `text-afblue` : `text-zinc-900/80`
                           }`}
                         >

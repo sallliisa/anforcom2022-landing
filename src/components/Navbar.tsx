@@ -2,7 +2,7 @@ import { Center, Group, Box, Stack, Anchor } from './core'
 import { NextRouter, useRouter } from 'next/router'
 import { routes } from 'routes/routes'
 import { useId, useState } from 'react'
-import { Variants, m, AnimatePresence } from 'framer-motion'
+import { AnimatePresence } from 'framer-motion'
 import FadeTransY from './FadeTransY'
 
 const isActive = (route: string, router: NextRouter) => {
@@ -38,7 +38,7 @@ export default function Navbar() {
               {popover && (
                 <>
                   <FadeTransY control={popover}>
-                    <Box className='absolute bg-main-dark-grey p-2 text-sm w-64 top-12 left-[-64px] rounded-lg drop-shadow-lg'>
+                    <Box className='absolute z-50 bg-main-dark-grey p-2 text-sm w-64 top-12 left-[-64px] rounded-lg drop-shadow-lg'>
                       <Stack className='gap-1'>
                         <Box
                           onClick={() => router.push('/competitions/duc')}
