@@ -72,7 +72,15 @@ const DUC: NextPage = () => {
           <div className='relative overflow-hidden z-50'>
             <div style={{ backdropFilter: 'brightness(50%)' }}>
               <Center>
-                <GradientBackgroundAnim color1='#FE6099' color2='#F1AB28' color3='#F1AB28' />
+                <div
+                  className={`absolute left-[50%] top-[50%] -z-10 w-[768px] h-[768px] md:w-[2300px] md:h-[2300px] bg-[#FE6099] blur-2xl opacity-20 rounded-full animate-blob0`}
+                />
+                <div
+                  className={`absolute left-[55%] top-[40%] mr-8 -z-10 w-[768px] h-[768px] md:w-[2300px] md:h-[2300px] bg-[#F1AB28] blur-2xl opacity-20 rounded-full animate-blob1`}
+                />
+                <div
+                  className={`absolute left-[40%] top-[60%] ml-8 -z-10 w-[768px] h-[768px] md:w-[2300px] md:h-[2300px] bg-[#F1AB28] blur-2xl opacity-20 rounded-full animate-blob2`}
+                />
                 <Stack className='px-8 py-16 xl:px-64 lg:px-32 md:px-16 2xl:py-32 z-10 gap-8'>
                   <h1 className='text-5xl 2xl:text-8xl md:text-7xl font-bold max-w-4xl leading-snug z-10 text-center'>
                     Diponegoro{' '}
@@ -119,7 +127,7 @@ const DUC: NextPage = () => {
 
               <Group justify='center' className='gap-8'>
                 <Stack align='center'>
-                  <IconCircle2 className='stroke-[#333] -z-1' size={width > 1299 ? 225 : 128} />
+                  <IconCircle2 className='stroke-[#222] -z-1' size={width > 1299 ? 225 : 128} />
                   <Stack align='center' className='mt-[-36px]'>
                     <h2 className='text-xs tracking-[0.25rem] text-center'>SECOND PLACE</h2>
                     <h1 className='text-xl font-bold max-w-3xl'>Rp2.500.000</h1>
@@ -127,7 +135,7 @@ const DUC: NextPage = () => {
                 </Stack>
 
                 <Stack align='center'>
-                  <IconCircle3 className='stroke-[#333] -z-1' size={width > 1299 ? 225 : 128} />
+                  <IconCircle3 className='stroke-[#222] -z-1' size={width > 1299 ? 225 : 128} />
                   <Stack align='center' className='mt-[-36px]'>
                     <h2 className='text-xs tracking-[0.25rem] text-center'>THIRD PLACE</h2>
                     <h1 className='text-xl font-bold max-w-3xl'>Rp1.500.000</h1>
@@ -153,15 +161,15 @@ const DUC: NextPage = () => {
                       <div>
                         <h1
                           className={`text-4xl md:text-6xl font-bold break-words ${
-                            data.isActive ? `text-afblue` : `text-[#333]`
+                            data.isActive ? `text-afblue` : `text-[#222]`
                           }`}
                         >
                           {data.title}
                         </h1>
                       </div>
-                      <h2 className={`text-lg mt-8 ${!data.isActive ? 'text-[#333]' : ''}`}>{data.date}</h2>
+                      <h2 className={`text-lg mt-8 ${!data.isActive ? 'text-[#222]' : ''}`}>{data.date}</h2>
                     </Box>
-                    {idx != timelineItems.length - 1 && <div className='h-1 min-w-[256px] bg-[#333]'></div>}
+                    {idx != timelineItems.length - 1 && <div className='h-1 min-w-[256px] bg-[#222]'></div>}
                   </>
                 ))}
               </Group>

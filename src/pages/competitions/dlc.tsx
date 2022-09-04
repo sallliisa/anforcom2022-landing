@@ -104,7 +104,7 @@ const DLC: NextPage = () => {
 
               <Group justify='center' className='gap-8'>
                 <Stack align='center'>
-                  <IconCircle2 className='stroke-[#101012] -z-1' size={width > 1299 ? 225 : 128} />
+                  <IconCircle2 className='stroke-[#222] -z-1' size={width > 1299 ? 225 : 128} />
                   <Stack align='center' className='mt-[-36px]'>
                     <h2 className='text-xs tracking-[0.25rem] text-center'>SECOND PLACE</h2>
                     <h1 className='text-xl font-bold max-w-3xl'>Rp2.500.000</h1>
@@ -112,7 +112,7 @@ const DLC: NextPage = () => {
                 </Stack>
 
                 <Stack align='center'>
-                  <IconCircle3 className='stroke-[#101012] -z-1' size={width > 1299 ? 225 : 128} />
+                  <IconCircle3 className='stroke-[#222] -z-1' size={width > 1299 ? 225 : 128} />
                   <Stack align='center' className='mt-[-36px]'>
                     <h2 className='text-xs tracking-[0.25rem] text-center'>THIRD PLACE</h2>
                     <h1 className='text-xl font-bold max-w-3xl'>Rp1.500.000</h1>
@@ -138,15 +138,15 @@ const DLC: NextPage = () => {
                       <div>
                         <h1
                           className={`text-4xl md:text-6xl font-bold break-words ${
-                            data.isActive ? `text-afblue` : `text-zinc-900/80`
+                            data.isActive ? `text-afblue` : `text-[#222]`
                           }`}
                         >
                           {data.title}
                         </h1>
                       </div>
-                      <h2 className={`text-xl mt-8 ${!data.isActive ? 'text-zinc-900/80' : ''}`}>{data.date}</h2>
+                      <h2 className={`text-xl mt-8 ${!data.isActive ? 'text-[#222]' : ''}`}>{data.date}</h2>
                     </Box>
-                    {idx != timelineItems.length - 1 && <div className='h-1 min-w-[256px] bg-zinc-600/20'></div>}
+                    {idx != timelineItems.length - 1 && <div className='h-1 min-w-[256px] bg-[#222]'></div>}
                   </>
                 ))}
               </Group>
